@@ -3,7 +3,7 @@ import { reduce, find, forEach, sortBy, without, isArray, has, findIndex, isDefi
 import { PropertiesPanel, DebounceInputModule, usePrevious, SelectEntry, isCheckboxEntryEdited, isSelectEntryEdited, CheckboxEntry, isTextAreaEntryEdited, TextAreaEntry, isTextFieldEntryEdited, TextFieldEntry, Group, isToggleSwitchEntryEdited, ToggleSwitchEntry, ListGroup, ListEntry, SimpleEntry, CollapsibleEntry, useLayoutState, HeaderButton, ArrowIcon, CreateIcon, DropdownButton } from '@bpmn-io/properties-panel';
 import { createContext, render, h, Component } from '@bpmn-io/properties-panel/preact';
 import { getLabel } from 'bpmn-js/lib/features/label-editing/LabelUtil';
-import { is, getBusinessObject, isAny as isAny$1 } from 'bpmn-js/lib/util/ModelUtil';
+import { is, getBusinessObject } from 'bpmn-js/lib/util/ModelUtil';
 import { isInterrupting, isEventSubProcess, isExpanded } from 'bpmn-js/lib/util/DiUtil';
 import React from '@bpmn-io/properties-panel/preact/compat';
 import { jsx, jsxs } from '@bpmn-io/properties-panel/preact/jsx-runtime';
@@ -3250,7 +3250,7 @@ function NameProps(props) {
     element
   } = props;
 
-  if (isAny$1(element, ['bpmn:Collaboration', 'bpmn:DataAssociation', 'bpmn:Association'])) {
+  if (isAny(element, ['bpmn:Collaboration', 'bpmn:DataAssociation', 'bpmn:Association'])) {
     return [];
   }
 

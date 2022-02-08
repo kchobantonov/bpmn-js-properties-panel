@@ -3262,7 +3262,7 @@ function NameProps(props) {
     element
   } = props;
 
-  if (ModelUtil.isAny(element, ['bpmn:Collaboration', 'bpmn:DataAssociation', 'bpmn:Association'])) {
+  if (ModelingUtil.isAny(element, ['bpmn:Collaboration', 'bpmn:DataAssociation', 'bpmn:Association'])) {
     return [];
   }
 
